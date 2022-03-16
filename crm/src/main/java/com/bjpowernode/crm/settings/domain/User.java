@@ -2,19 +2,39 @@ package com.bjpowernode.crm.settings.domain;
 
 public class User {
 
-    private String id;
-    private String loginAct;
-    private String name;
-    private String loginPwd;
-    private String email;
-    private String expireTime;
-    private String lockState;
-    private String deptno;
-    private String allowIps;
-    private String createTime;
-    private String createBy;
-    private String editTime;
-    private String editBy;
+    /*
+        关于字符串中表现的日期及时间
+        日期：年月日
+            yyyy-MM-dd 10位字符串
+        日期+时间：年月日+时分秒 19位字符串
+            yyyy-MM-dd HH:mm:ss
+    */
+
+    /*
+        关于登录
+            验证账号和密码
+            执行本sql语句返回的是一个User对象 select * from tbl_user where loginAct = ? and loginPwd = ?
+            若User对象位null，则账号密码错误
+            否则，需要继续向下验证其他的字段信息
+            需要从User中get到
+                expireTime 验证失效时间
+                lockState 验证锁定状态
+                allowIps 验证浏览器端的ip地址是否有效
+     */
+
+    private String id;  //编号 主键
+    private String loginAct;    //登陆账号
+    private String name;    //用户的真实姓名
+    private String loginPwd;    //登录密码
+    private String email;   //邮箱
+    private String expireTime;  //失效时间（19位）
+    private String lockState;   //锁定状态 0：锁定 1：启用
+    private String deptno;  //部门编号
+    private String allowIps;    //允许访问的ip地址
+    private String createTime;  //创建时间（19位）
+    private String createBy;    //创建人
+    private String editTime;    //修改时间（19位）
+    private String editBy;  //修改人
 
     public String getId() {
         return id;
