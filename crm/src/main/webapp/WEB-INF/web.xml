@@ -4,10 +4,16 @@
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>UserController</servlet-name>
+    <servlet-class>com.bjpowernode.crm.settings.web.controller.UserController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserController</servlet-name>
+    <url-pattern>/seetings/user/xxx.do</url-pattern>
+  </servlet-mapping>
 
-  
-  
-  
 </web-app>
 
 
