@@ -4,6 +4,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
+import com.bjpowernode.crm.exception.LoginException;
 import org.apache.ibatis.session.SqlSession;
 
 public class TransactionInvocationHandler implements InvocationHandler{
@@ -23,8 +24,7 @@ public class TransactionInvocationHandler implements InvocationHandler{
 		}catch(Exception e){
 			session.rollback();
 			e.printStackTrace();
-
-			//throw e.getCause();
+			throw e.getCause();
 		}finally{
 			SqlSessionUtil.myClose(session);
 		}
