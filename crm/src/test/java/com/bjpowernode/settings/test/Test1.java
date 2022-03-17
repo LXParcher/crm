@@ -2,6 +2,7 @@ package com.bjpowernode.settings.test;
 
 import com.bjpowernode.crm.utils.DateTimeUtil;
 import com.bjpowernode.crm.utils.MD5Util;
+import com.bjpowernode.crm.utils.UUIDUtil;
 
 public class Test1 {
     public static void main(String[] args) {
@@ -15,8 +16,11 @@ public class Test1 {
          *//*
         System.out.println(isExpire);*/
 
-        String pwd = "123";
+        String pwd = "33";
         pwd = MD5Util.getMD5(pwd);
         System.out.println(pwd);
+
+        /*String uuid = UUIDUtil.getUUID();
+        System.out.println(uuid);*/
     }
 }

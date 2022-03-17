@@ -15,6 +15,11 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 	<script>
 		$(function () {
 
+			// 如果当前窗口不是顶层窗口，需要将顶层窗口设置为当前窗口
+			if (window.top != window) {
+				window.top.location = window.location;
+			}
+
 			$("#loginAct").val("");
 
 			$("#loginAct").focus();
@@ -47,14 +52,24 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 			}
 
 			$.ajax({
-				url : "",
+				url : "settings/user/login.do",
 				data : {
-
+					"loginAct" : loginAct,
+					"loginPwd" : loginPwd
 				},
-				type : "",
+				type : "post",
 				dataType : "json",
 				success : function (data) {
 
+					/*
+					data={"success":true/false,"msg":"登录情况"}
+					 */
+
+					if (data.success) {
+						window.location.href = "workbench/index.jsp";
+					} else {
+						$("#msg").html(data.msg)
+					}
 				}
 			})
 		}
@@ -67,7 +82,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 		<img src="image/IMG_7114.JPG" style="width: 100%; height: 90%; position: relative; top: 50px;">
 	</div>
 	<div id="top" style="height: 50px; background-color: #3C3C3C; width: 100%;">
-		<div style="position: absolute; top: 5px; left: 0px; font-size: 30px; font-weight: 400; color: white; font-family: 'times new roman'">CRM &nbsp;<span style="font-size: 12px;">&copy;2017&nbsp;动力节点</span></div>
+		<div style="position: absolute; top: 5px; left: 0px; font-size: 30px; font-weight: 400; color: white; font-family: 'times new roman'">CRM &nbsp;<span style="font-size: 12px;">&copy;2020&nbsp;动力节点</span></div>
 	</div>
 	
 	<div style="position: absolute; top: 120px; right: 100px;width:450px;height:400px;border:1px solid #D5D5D5">
@@ -75,7 +90,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 			<div class="page-header">
 				<h1>登录</h1>
 			</div>
-			<form action="workbench/index.html" class="form-horizontal" role="form">
+			<form action="workbench/index.jsp" class="form-horizontal" role="form">
 				<div class="form-group form-group-lg">
 					<div style="width: 350px;">
 						<input class="form-control" type="text" placeholder="用户名" id="loginAct">
