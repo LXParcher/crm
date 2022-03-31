@@ -5,6 +5,8 @@
       <map>
         <entry key="file://$PROJECT_DIR$/crm/src/main/webapp/login.jsp" value="file://$PROJECT_DIR$/crm/src/main/webapp" />
         <entry key="file://$PROJECT_DIR$/crm/src/main/webapp/test1.JSP" value="file://$PROJECT_DIR$/crm/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/crm/src/main/webapp/workbench/activity/detail.jsp" value="file://$PROJECT_DIR$/crm/src/main/webapp/workbench/activity" />
+        <entry key="file://$PROJECT_DIR$/crm/src/main/webapp/workbench/activity/index.jsp" value="file://$PROJECT_DIR$/crm/src/main/webapp/workbench/activity" />
       </map>
     </option>
   </component>

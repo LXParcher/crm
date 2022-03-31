@@ -16,3 +16,8 @@ $.ajax({
 %>
 
 <base href="<%=basePath%>">
+
+// 当前系统时间
+String createTime = DateTimeUtil.getSysTime();
+// 当前登录的用户
+String createBy = ((User)request.getSession(false).getAttribute("user")).getName();
