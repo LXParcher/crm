@@ -46,7 +46,7 @@ public class UserController extends HttpServlet {
         }catch (Exception e) {
             e.printStackTrace();
             String msg = e.getMessage();
-            Map<String, Object> map = new HashMap<>();
+            Map<String, Object> map = new HashMap<String, Object>();
             map.put("success", false);
             map.put("msg", msg);
             PrintJson.printJsonObj(response, map);

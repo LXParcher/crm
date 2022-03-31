@@ -18,7 +18,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User login(String loginAct, String loginPwd, String ip) throws LoginException {
 
-        Map<String, String> map = new HashMap<>();
+        Map<String, String> map = new HashMap<String, String>();
         map.put("loginAct", loginAct);
         map.put("loginPwd", loginPwd);
 

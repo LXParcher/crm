@@ -32,6 +32,11 @@
     <servlet-name>activityController</servlet-name>
     <servlet-class>com.bjpowernode.crm.workbench.web.controller.ActivityController</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>clueController</servlet-name>
+    <servlet-class>com.bjpowernode.crm.workbench.web.controller.ClueController</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>UserController</servlet-name>
     <url-pattern>/settings/user/login.do</url-pattern>
@@ -39,6 +44,20 @@
   <servlet-mapping>
     <servlet-name>activityController</servlet-name>
     <url-pattern>/workbench/activity/getUserList.do</url-pattern>
+    <url-pattern>/workbench/activity/saveActivity.do</url-pattern>
+    <url-pattern>/workbench/activity/updateActivity.do</url-pattern>
+    <url-pattern>/workbench/activity/pageList.do</url-pattern>
+    <url-pattern>/workbench/activity/delete.do</url-pattern>
+    <url-pattern>/workbench/activity/getUserListAndActivity.do</url-pattern>
+    <url-pattern>/workbench/activity/detail.do</url-pattern>
+    <url-pattern>/workbench/activity/getRemarkListByActivityId.do</url-pattern>
+    <url-pattern>/workbench/activity/removeRemark.do</url-pattern>
+    <url-pattern>/workbench/activity/saveRemark.do</url-pattern>
+    <url-pattern>/workbench/activity/editRemark.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>clueController</servlet-name>
+    <url-pattern>/workbench/clue/xxx.do</url-pattern>
   </servlet-mapping>
 
 </web-app>
