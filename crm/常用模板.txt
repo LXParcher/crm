@@ -21,3 +21,14 @@ $.ajax({
 String createTime = DateTimeUtil.getSysTime();
 // 当前登录的用户
 String createBy = ((User)request.getSession(false).getAttribute("user")).getName();
+
+$(".time").datetimepicker({
+    minView: "month",
+    language: 'zh-CN',
+    format: 'yyyy-mm-dd',
+    autoclose: true,
+    todayBtn: true,
+    pickerPosition: "bottom-left"
+});
+
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

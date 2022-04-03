@@ -4,6 +4,28 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.bjpowernode.crm.workbench.dao.ContactsRemarkDao">
+    <insert id="save">
+        insert into tbl_contacts_remark(
+            id,
+            noteContent,
+            createTime,
+            createBy,
+            editTime,
+            editBy,
+            editFlag,
+            contactsId
+        )
+        values(
+                  #{id},
+                  #{noteContent},
+                  #{createTime},
+                  #{createBy},
+                  #{editTime},
+                  #{editBy},
+                  #{editFlag},
+                  #{contactsId}
+              )
+    </insert>
 	
   	
 </mapper>

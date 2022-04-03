@@ -7,6 +7,8 @@
         <entry key="file://$PROJECT_DIR$/crm/src/main/webapp/test1.JSP" value="file://$PROJECT_DIR$/crm/src/main/webapp" />
         <entry key="file://$PROJECT_DIR$/crm/src/main/webapp/workbench/activity/detail.jsp" value="file://$PROJECT_DIR$/crm/src/main/webapp/workbench/activity" />
         <entry key="file://$PROJECT_DIR$/crm/src/main/webapp/workbench/activity/index.jsp" value="file://$PROJECT_DIR$/crm/src/main/webapp/workbench/activity" />
+        <entry key="file://$PROJECT_DIR$/crm/src/main/webapp/workbench/clue/convert.jsp" value="file://$PROJECT_DIR$/crm/src/main/webapp/workbench/clue" />
+        <entry key="file://$PROJECT_DIR$/crm/src/main/webapp/workbench/clue/index.jsp" value="file://$PROJECT_DIR$/crm/src/main/webapp/workbench/clue" />
       </map>
     </option>
   </component>

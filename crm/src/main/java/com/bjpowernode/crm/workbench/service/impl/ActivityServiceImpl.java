@@ -112,4 +112,22 @@ public class ActivityServiceImpl implements ActivityService {
         if (count == 1) return true;
         return false;
     }
+
+    @Override
+    public List<Activity> getActivityListByClueId(String clueId) {
+        List<Activity> aList = activityDao.getActivityListByClueId(clueId);
+        return aList;
+    }
+
+    @Override
+    public List<Activity> getActivityListByNameAndNotByClueId(Map<String, String> map) {
+        List<Activity> activityList = activityDao.getActivityListByNameAndNotByClueId(map);
+        return activityList;
+    }
+
+    @Override
+    public List<Activity> getActivityListByName(String aname) {
+        List<Activity> activityList = activityDao.getActivityListByName(aname);
+        return activityList;
+    }
 }
